@@ -1,0 +1,22 @@
+.info {
+  margin: 80px 0px 40px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.profile {
+  width: 64px;
+  height: 64px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid white;
+  border-radius: 9999px;
+}
+
+#name {
+  font-weight: 600;
+}

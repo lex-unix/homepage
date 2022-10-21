@@ -1,0 +1,12 @@
+.nav {
+  width: 100%;
+  max-width: 720px;
+  margin-top: 72px;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: right;
+}
+
+.svg path {
+  fill: var(--highContrast);
+}
