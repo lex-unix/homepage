@@ -1,13 +1,25 @@
 import type { NextPage } from 'next'
 import Container from '@/components/container'
 import s from '@/styles/index.module.scss'
+import Image from 'next/future/image'
 
 const Home: NextPage = () => {
   return (
     <Container>
       <div className={s.info}>
-        <p id={s.name}>Alexey Miin</p>
-        <p>Front&ndash;end engineer</p>
+        <div className={s['img-container']}>
+          <Image
+            src="/profile.png"
+            alt="Profile"
+            width={100}
+            height={64}
+            className={s.img}
+          />
+        </div>
+        <div>
+          <p id={s.name}>Alexey Miin</p>
+          <p id={s.muted}>Front&ndash;end engineer</p>
+        </div>
       </div>
       <div className={s.about}>
         <p>
