@@ -1,5 +1,25 @@
 .info {
-  margin: 80px 0px 40px;
+  margin: 68px 0px 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.img-container {
+  width: 64px;
+  height: 64px;
+  border-radius: 9999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.img {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: -18px;
+  margin: 0 auto;
 }
 
 .about {
@@ -19,4 +39,8 @@
 
 #name {
   font-weight: 600;
+}
+
+#muted {
+  color: var(--muted);
 }
