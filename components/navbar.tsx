@@ -6,7 +6,9 @@ const Navbar: React.FC = () => {
   const { toggleMenu } = useContext(CommandMenuContext)
   return (
     <div className={s.nav}>
-      <CommandIcon onClick={toggleMenu} />
+      <button className={s.button}>
+        <CommandIcon onClick={toggleMenu} />
+      </button>
     </div>
   )
 }

@@ -2,9 +2,23 @@
   width: 100%;
   max-width: 720px;
   margin-top: 72px;
+  margin-right: auto;
+  margin-left: auto;
   padding: 0px 20px;
   display: flex;
   justify-content: right;
+}
+
+.button {
+  padding: 12px;
+  border-radius: 12px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.25s ease-out;
+}
+
+.button:hover {
+  background-color: var(--icon-bg);
 }
 
 .svg path {
