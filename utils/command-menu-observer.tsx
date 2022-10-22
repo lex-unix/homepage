@@ -3,7 +3,7 @@ import React, { createContext, useCallback, useState } from 'react'
 interface CommandMenuValue {
   open: boolean
   toggleMenu: () => void
-  closeMenu: (close: boolean) => void
+  closeMenu: () => void
 }
 
 // @ts-ignore
