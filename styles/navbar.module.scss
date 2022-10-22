@@ -1,10 +1,9 @@
 .nav {
   width: 100%;
   max-width: 720px;
-  margin-top: 72px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0px 20px;
+  padding: var(--space5) var(--space2) 0;
   display: flex;
   justify-content: right;
 }
@@ -14,7 +13,7 @@
   border-radius: 12px;
   background-color: transparent;
   cursor: pointer;
-  transition: 0.25s ease-out;
+  transition: 0.25s ease-in-out;
 }
 
 .button:hover {
