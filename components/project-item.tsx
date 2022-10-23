@@ -1,19 +1,26 @@
 import React from 'react'
+import Link from 'next/link'
 import s from '@/styles/project-item.module.scss'
 
 interface Props {
   name: string
+  description: string
   href: string
   year: number
 }
 
-const ProjectItem: React.FC<Props> = ({ name, href, year }) => {
+const ProjectItem: React.FC<Props> = ({ name, description, href, year }) => {
   return (
-    <a href={href} rel="noreferrer noopener" className={s.a}>
-      <span>{name}</span>
-      <div className={s.div}></div>
-      <p>{year}</p>
-    </a>
+    <Link href={href}>
+      <a className={s.item} target="_blank" rel="noreferrer noopener">
+        <p>
+          {name}
+          <span className={s.description}>{description}</span>
+        </p>
+        <div className={s.line}></div>
+        <p>{year}</p>
+      </a>
+    </Link>
   )
 }
 
