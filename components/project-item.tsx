@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import s from '@/styles/project-item.module.scss'
+import s from '@/styles/projects.module.scss'
 
 interface Props {
   name: string
