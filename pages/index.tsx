@@ -17,8 +17,8 @@ const Home: NextPage = () => {
           />
         </div>
         <div>
-          <p id={s.name}>Alexey Miin</p>
-          <p id={s.muted}>Front&ndash;end engineer</p>
+          <p className={s.name}>Alexey Miin</p>
+          <p className={s.muted}>Front&ndash;end engineer</p>
         </div>
       </div>
       <div className={s.about}>
