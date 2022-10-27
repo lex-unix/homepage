@@ -6,7 +6,7 @@ import s from '@/styles/tool.module.scss'
 const Tools: NextPage = () => {
   return (
     <Container title="Tools">
-      <p>Tools I Use Everyday</p>
+      <p className={s.heading}>Tools i use everyday</p>
       <div className={s['tools-list']}>
         <Tool
           name="Arc"
