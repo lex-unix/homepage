@@ -7,8 +7,11 @@ import {
   EmailIcon,
   GitHubIcon,
   HomeIcon,
+  MoonIcon,
+  ProjectIcon,
   SunIcon,
-  Tools,
+  SystemIcon,
+  ToolIcon,
   TwitterIcon
 } from './icons'
 
@@ -53,13 +56,13 @@ const CommandMenu: React.FC = () => {
           />
           <Item
             title="Projects"
-            icon={<HomeIcon />}
+            icon={<ProjectIcon />}
             href="/projects"
             onClick={handleItemClick}
           />
           <Item
             title="Tools"
-            icon={<Tools />}
+            icon={<ToolIcon />}
             href="/tools"
             onClick={handleItemClick}
           />
@@ -87,13 +90,13 @@ const CommandMenu: React.FC = () => {
         <Command.Group heading="Theme">
           <Item
             title={`Change Theme to ${theme === 'light' ? 'Dark' : 'Light'}`}
-            icon={theme === 'light' ? <SunIcon /> : <SunIcon />}
+            icon={theme === 'light' ? <MoonIcon /> : <SunIcon />}
             onSelect={toggleTheme}
             onClick={handleItemClick}
           />
           <Item
             title="Change Theme to System"
-            icon={<Tools />}
+            icon={<SystemIcon />}
             onSelect={() => setTheme(systemTheme ? systemTheme : 'light')}
             onClick={handleItemClick}
           />
