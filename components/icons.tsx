@@ -50,7 +50,7 @@ export const ProjectIcon = () => (
   </svg>
 )
 
-export const ToolIcon = () => (
+export const DashboardIcon = () => (
   <svg
     width="18"
     height="18"

@@ -11,7 +11,7 @@ import {
   ProjectIcon,
   SunIcon,
   SystemIcon,
-  ToolIcon,
+  DashboardIcon,
   TwitterIcon
 } from './icons'
 
@@ -61,9 +61,9 @@ const CommandMenu: React.FC = () => {
             onClick={handleItemClick}
           />
           <Item
-            title="Tools"
-            icon={<ToolIcon />}
-            href="/tools"
+            title="Dashboard"
+            icon={<DashboardIcon />}
+            href="/dashboard"
             onClick={handleItemClick}
           />
         </Command.Group>
