@@ -1,7 +1,7 @@
 import { Command } from 'cmdk'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
-import React, { useEffect, useContext } from 'react'
+import React, { useEffect, useContext, useMemo } from 'react'
 import { CommandMenuContext } from '@/utils/command-menu-observer'
 import {
   EmailIcon,
@@ -18,13 +18,56 @@ import {
 const CommandMenu: React.FC = () => {
   const { open, toggleMenu, closeMenu } = useContext(CommandMenuContext)
   const { theme, setTheme, systemTheme } = useTheme()
+  const router = useRouter()
+
+  const pages = useMemo(
+    () => [
+      {
+        name: 'Home',
+        icon: <HomeIcon />,
+        cb: () => router.push('/')
+      },
+      {
+        name: 'Projects',
+        icon: <ProjectIcon />,
+        cb: () => router.push('/projects')
+      },
+      {
+        name: 'Dashboard',
+        icon: <DashboardIcon />,
+        cb: () => router.push('/dashboard')
+      }
+    ],
+    [router]
+  )
+
+  const socials = useMemo(
+    () => [
+      {
+        name: 'Emal',
+        icon: <EmailIcon />,
+        cb: () => router.push('mailto:alexmiyin@gmail.com')
+      },
+      {
+        name: 'GitHub',
+        icon: <GitHubIcon />,
+        cb: () => window.open('https://github.com/lex-unix', '_blank')
+      },
+      {
+        name: 'Twitter',
+        icon: <TwitterIcon />,
+        cb: () => window.open('https://twitter.com', '_blank')
+      }
+    ],
+    [router]
+  )
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')
   }
 
   const handleItemClick = () => {
-    toggleMenu()
+    closeMenu()
   }
 
   useEffect(() => {
@@ -48,56 +91,30 @@ const CommandMenu: React.FC = () => {
       <Command.List>
         <Command.Empty>No results found.</Command.Empty>
         <Command.Group heading="Page">
-          <Item
-            title="Home"
-            icon={<HomeIcon />}
-            href="/"
-            onClick={handleItemClick}
-          />
-          <Item
-            title="Projects"
-            icon={<ProjectIcon />}
-            href="/projects"
-            onClick={handleItemClick}
-          />
-          <Item
-            title="Dashboard"
-            icon={<DashboardIcon />}
-            href="/dashboard"
-            onClick={handleItemClick}
-          />
+          {pages.map(page => (
+            <CommandItem key={page.name} {...page} onClick={handleItemClick} />
+          ))}
         </Command.Group>
         <Command.Group heading="Socials">
-          <Item
-            title="Email"
-            icon={<EmailIcon />}
-            href="mailto:alexmiyin@gmail.com"
-            onClick={handleItemClick}
-          />
-          <Item
-            title="GitHub"
-            icon={<GitHubIcon />}
-            href="https://github.com/lex-unix"
-            onClick={handleItemClick}
-          />
-          <Item
-            title="Twitter"
-            icon={<TwitterIcon />}
-            href="/tools"
-            onClick={handleItemClick}
-          />
+          {socials.map(social => (
+            <CommandItem
+              key={social.name}
+              {...social}
+              onClick={handleItemClick}
+            />
+          ))}
         </Command.Group>
         <Command.Group heading="Theme">
-          <Item
-            title={`Change Theme to ${theme === 'light' ? 'Dark' : 'Light'}`}
+          <CommandItem
+            name={`Change Theme to ${theme === 'light' ? 'Dark' : 'Light'}`}
             icon={theme === 'light' ? <MoonIcon /> : <SunIcon />}
-            onSelect={toggleTheme}
+            cb={toggleTheme}
             onClick={handleItemClick}
           />
-          <Item
-            title="Change Theme to System"
+          <CommandItem
+            name="Change Theme to System"
             icon={<SystemIcon />}
-            onSelect={() => setTheme(systemTheme ? systemTheme : 'light')}
+            cb={() => setTheme(systemTheme ? systemTheme : 'light')}
             onClick={handleItemClick}
           />
         </Command.Group>
@@ -106,49 +123,30 @@ const CommandMenu: React.FC = () => {
   )
 }
 
-interface ItemProps {
-  title: string
+interface CommandItemProps {
+  name: string
   icon: React.ReactNode
-  href?: string
-  onSelect?: () => void
+  cb: () => void
   onClick: () => void
 }
 
-const Item: React.FC<ItemProps> = ({
-  title,
+const CommandItem: React.FC<CommandItemProps> = ({
+  name,
   icon,
-  href,
-  onSelect,
+  cb,
   onClick
 }) => {
-  const router = useRouter()
-
-  let select
-  if (onSelect) {
-    select = () => {
-      onClick()
-      onSelect()
-    }
-  } else {
-    select = () => {
-      onClick()
-      router.push(href ? href : '#')
-    }
-  }
-
-  if (href) {
-    return (
-      <Command.Item onSelect={select}>
-        {icon}
-        {title}
-      </Command.Item>
-    )
+  const handleSelectAndClick = () => {
+    cb()
+    onClick()
   }
 
   return (
-    <Command.Item onSelect={select}>
-      {icon}
-      {title}
+    <Command.Item
+      onSelect={handleSelectAndClick}
+      onClick={handleSelectAndClick}
+    >
+      {icon} {name}
     </Command.Item>
   )
 }
