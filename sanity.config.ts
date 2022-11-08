@@ -35,7 +35,7 @@ export default defineConfig({
           },
           {
             name: 'description',
-            title: 'description',
+            title: 'Description',
             type: 'string'
           },
           {
