@@ -2,7 +2,7 @@ import Container from '@/components/container'
 import type { InferGetStaticPropsType } from 'next'
 import s from '@/styles/writing.module.scss'
 import PostPreview from '@/components/post-preview'
-import { Post } from '@/lib/types'
+import type { Post } from '@/lib/types'
 import { getClient } from '@/lib/sanity-server'
 import { allPostsQuery } from '@/lib/queries'
 

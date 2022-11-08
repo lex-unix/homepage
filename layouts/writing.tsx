@@ -1,5 +1,5 @@
 import Container from '@/components/container'
-import { Post } from '@/lib/types'
+import type { Post } from '@/lib/types'
 import React from 'react'
 import s from '@/styles/post.module.scss'
 

@@ -2,7 +2,7 @@ import { WritingLayout } from '@/layouts/writing'
 import { mdxToHtml } from '@/lib/mdx'
 import { postQuery, postSlugsQuery } from '@/lib/queries'
 import { getClient, sanityClient } from '@/lib/sanity-server'
-import { Post } from '@/lib/types'
+import type { Post } from '@/lib/types'
 import type { GetStaticProps } from 'next'
 import { MDXRemote } from 'next-mdx-remote'
 
