@@ -1,3 +1,10 @@
+.cmd-container {
+  position: fixed;
+  inset: 0px;
+  background-color: var(--overlay);
+  z-index: 100;
+}
+
 [cmdk-root] {
   max-width: 640px;
   width: 100%;
@@ -8,6 +15,7 @@
   border: 1px solid var(--gray6);
   position: fixed;
   top: 10%;
+  z-index: 10000;
 
   .dark & {
     background: var(--gray2);
@@ -19,7 +27,7 @@
   font-family: var(--font-sans);
   border: none;
   width: 100%;
-  font-size: 15px;
+  font-size: 20px;
   padding: 8px 16px;
   outline: none;
   background: var(--gray2);
@@ -113,6 +121,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
 }
 @media (max-width: 640px) {
   [cmdk-root] {

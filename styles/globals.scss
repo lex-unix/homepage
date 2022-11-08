@@ -79,6 +79,8 @@ a {
   --lowContrast: #ffffff;
   --highContrast: #000000;
 
+  --overlay: hsla(0, 0%, 17%, 0.7);
+
   --gray1: hsl(0, 0%, 99%);
   --gray2: hsl(0, 0%, 97.3%);
   --gray3: hsl(0, 0%, 95.1%);
@@ -115,6 +117,8 @@ a {
   // dark theme colors
   --lowContrast: #000000;
   --highContrast: #ffffff;
+
+  --overlay: hsla(0, 0%, 5%, 0.7);
 
   --gray1: hsl(0, 0%, 8.5%);
   --gray2: hsl(0, 0%, 11%);

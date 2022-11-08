@@ -12,7 +12,8 @@ import {
   SunIcon,
   SystemIcon,
   DashboardIcon,
-  TwitterIcon
+  TwitterIcon,
+  WritingIcon
 } from './icons'
 
 const CommandMenu: React.FC = () => {
@@ -36,6 +37,11 @@ const CommandMenu: React.FC = () => {
         name: 'Dashboard',
         icon: <DashboardIcon />,
         cb: () => router.push('/dashboard')
+      },
+      {
+        name: 'Writing',
+        icon: <WritingIcon />,
+        cb: () => router.push('/writing')
       }
     ],
     [router]
@@ -86,40 +92,48 @@ const CommandMenu: React.FC = () => {
   })
 
   return (
-    <Command.Dialog open={open} onOpenChange={toggleMenu}>
-      <Command.Input placeholder="Search" />
-      <Command.List>
-        <Command.Empty>No results found.</Command.Empty>
-        <Command.Group heading="Page">
-          {pages.map(page => (
-            <CommandItem key={page.name} {...page} onClick={handleItemClick} />
-          ))}
-        </Command.Group>
-        <Command.Group heading="Socials">
-          {socials.map(social => (
+    <>
+      {open && <div className="cmd-container"></div>}
+      <Command.Dialog open={open} onOpenChange={toggleMenu}>
+        <Command.Input placeholder="Search" />
+        <Command.Separator />
+        <Command.List>
+          <Command.Empty>No results found.</Command.Empty>
+          <Command.Group heading="Page">
+            {pages.map(page => (
+              <CommandItem
+                key={page.name}
+                {...page}
+                onClick={handleItemClick}
+              />
+            ))}
+          </Command.Group>
+          <Command.Group heading="Socials">
+            {socials.map(social => (
+              <CommandItem
+                key={social.name}
+                {...social}
+                onClick={handleItemClick}
+              />
+            ))}
+          </Command.Group>
+          <Command.Group heading="Theme">
             <CommandItem
-              key={social.name}
-              {...social}
+              name={`Change Theme to ${theme === 'light' ? 'Dark' : 'Light'}`}
+              icon={theme === 'light' ? <MoonIcon /> : <SunIcon />}
+              cb={toggleTheme}
               onClick={handleItemClick}
             />
-          ))}
-        </Command.Group>
-        <Command.Group heading="Theme">
-          <CommandItem
-            name={`Change Theme to ${theme === 'light' ? 'Dark' : 'Light'}`}
-            icon={theme === 'light' ? <MoonIcon /> : <SunIcon />}
-            cb={toggleTheme}
-            onClick={handleItemClick}
-          />
-          <CommandItem
-            name="Change Theme to System"
-            icon={<SystemIcon />}
-            cb={() => setTheme(systemTheme ? systemTheme : 'light')}
-            onClick={handleItemClick}
-          />
-        </Command.Group>
-      </Command.List>
-    </Command.Dialog>
+            <CommandItem
+              name="Change Theme to System"
+              icon={<SystemIcon />}
+              cb={() => setTheme(systemTheme ? systemTheme : 'light')}
+              onClick={handleItemClick}
+            />
+          </Command.Group>
+        </Command.List>
+      </Command.Dialog>
+    </>
   )
 }
 

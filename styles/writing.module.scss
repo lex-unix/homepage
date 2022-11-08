@@ -1,0 +1,40 @@
+.heading {
+  margin-bottom: var(--space6);
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.post {
+  padding: var(--space2);
+  margin: 0 calc(var(--space2) * -1);
+  border-radius: 6px;
+  border-top: 1px solid var(--grayA3);
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:hover:first-child {
+    margin-top: 0;
+    margin-bottom: 1px;
+    background-color: var(--grayA3);
+  }
+
+  &:hover {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    background-color: var(--grayA3);
+    border-top: 0;
+  }
+
+  &:hover + & {
+    border-top: 0;
+  }
+}
+
+.description {
+  color: var(--gray11);
+}
