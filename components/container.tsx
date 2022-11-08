@@ -13,6 +13,7 @@ const Container: React.FC<Props> = ({ title, children }) => {
       <Head>
         <title>{t}</title>
         <meta name="description" content="Lex Unix homepage" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="main">{children}</main>

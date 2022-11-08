@@ -1,0 +1,39 @@
+pre[class*='language-'] {
+  width: 100%;
+  font-size: 16px;
+  background-color: var(--gray1) !important;
+  margin: 0 auto 16px;
+  padding: var(--space1);
+  border: 1px solid var(--gray3);
+  border-radius: 4px;
+  overflow-x: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+pre::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+pre {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.token.keyword {
+  color: #add7ff;
+}
+
+.token.string {
+  color: #5de4c7;
+}
+
+.token.punctuation {
+  color: #f087bd;
+}
+
+.token.function,
+.token.class-name,
+.token.builtin {
+  color: #89ddff;
+}

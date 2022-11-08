@@ -1,6 +1,7 @@
 import '@/styles/globals.scss'
 import '@/styles/command.scss'
 import '@/styles/container.scss'
+import '@/styles/code.scss'
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'next-themes'
 import CommandMenu from '@/components/command-menu'
