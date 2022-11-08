@@ -1,33 +1,18 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import s from '@/styles/navbar.module.scss'
-import { CommandMenuContext } from '@/utils/command-menu-observer'
+import { useAtom } from 'jotai'
+import { commandState } from '@/states/command-menu'
+import { CommandIcon } from './icons'
 
 const Navbar: React.FC = () => {
-  const { toggleMenu } = useContext(CommandMenuContext)
+  const [open, setOpen] = useAtom(commandState)
   return (
     <div className={s.nav}>
-      <button className={s.button}>
-        <CommandIcon onClick={toggleMenu} />
+      <button className={s.button} onClick={() => setOpen(!open)}>
+        <CommandIcon />
       </button>
     </div>
   )
 }
-
-export const CommandIcon = ({ onClick }: { onClick: () => void }) => (
-  <svg
-    width="32"
-    height="32"
-    onClick={onClick}
-    viewBox="0 0 32 32"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className={s.svg}
-  >
-    <path
-      d="M9.45261 12.055V19.962H6.04764C2.71042 19.962 0 22.5862 0 25.9386C0 29.291 2.71042 32 6.04764 32C9.38485 32 12.0953 29.291 12.0953 25.9386V22.5524H19.9047V25.9386C19.9047 29.291 22.6151 32 25.9522 32C29.2896 32 32 29.291 32 25.9386C32 22.5862 29.2896 19.962 25.9522 19.962H22.5473V12.055H25.9522C29.2896 12.055 32 9.4307 32 6.07832C32 2.72594 29.2896 0 25.9522 0C22.6151 0 19.9047 2.72594 19.9047 6.07832V9.46456H12.0953V6.07832C12.0953 2.72594 9.38485 0 6.04764 0C2.71042 0 0 2.72594 0 6.07832C0 9.4307 2.71042 12.055 6.04764 12.055H9.45261ZM6.04764 9.49844C4.18422 9.49844 2.64267 7.95768 2.64267 6.07832C2.64267 4.19896 4.18422 2.64128 6.04764 2.64128C7.91105 2.64128 9.45261 4.19896 9.45261 6.07832V9.49844H6.04764ZM25.9522 9.49844H22.5473V6.07832C22.5473 4.19896 24.0889 2.64128 25.9522 2.64128C27.8158 2.64128 29.3572 4.19896 29.3572 6.07832C29.3572 7.95768 27.8158 9.49844 25.9522 9.49844ZM12.0953 19.9958V12.0212H19.9047V19.9958H12.0953ZM6.04764 22.5016H9.45261V25.9218C9.45261 27.8012 7.91105 29.3418 6.04764 29.3418C4.18422 29.3418 2.64267 27.8012 2.64267 25.9218C2.64267 24.0424 4.18422 22.5016 6.04764 22.5016ZM25.9522 22.5016C27.8158 22.5016 29.3572 24.0424 29.3572 25.9218C29.3572 27.8012 27.8158 29.3418 25.9522 29.3418C24.0889 29.3418 22.5473 27.8012 22.5473 25.9218V22.5016H25.9522Z"
-      fill="white"
-    />
-  </svg>
-)
 
 export default Navbar

@@ -1,8 +1,8 @@
 import { Command } from 'cmdk'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
-import React, { useEffect, useContext, useMemo } from 'react'
-import { CommandMenuContext } from '@/utils/command-menu-observer'
+import { useAtom } from 'jotai'
+import React, { useEffect, useMemo } from 'react'
 import {
   EmailIcon,
   GitHubIcon,
@@ -15,9 +15,10 @@ import {
   TwitterIcon,
   WritingIcon
 } from './icons'
+import { commandState } from '@/states/command-menu'
 
 const CommandMenu: React.FC = () => {
-  const { open, toggleMenu, closeMenu } = useContext(CommandMenuContext)
+  const [isOpen, setIsOpen] = useAtom(commandState)
   const { theme, setTheme, systemTheme } = useTheme()
   const router = useRouter()
 
@@ -73,17 +74,17 @@ const CommandMenu: React.FC = () => {
   }
 
   const handleItemClick = () => {
-    closeMenu()
+    setIsOpen(false)
   }
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === 'k' && e.metaKey) {
-        toggleMenu()
+        setIsOpen(!isOpen)
       }
 
       if (e.key === 'Enter') {
-        closeMenu()
+        setIsOpen(false)
       }
     }
 
@@ -93,8 +94,8 @@ const CommandMenu: React.FC = () => {
 
   return (
     <>
-      {open && <div className="cmd-container"></div>}
-      <Command.Dialog open={open} onOpenChange={toggleMenu}>
+      {isOpen && <div className="cmd-container"></div>}
+      <Command.Dialog open={isOpen} onOpenChange={setIsOpen}>
         <Command.Input placeholder="Search" />
         <Command.Separator />
         <Command.List>
