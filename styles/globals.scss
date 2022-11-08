@@ -47,6 +47,10 @@ a {
   text-decoration: none;
 }
 
+*::selection {
+  background-color: hsla(262, 56, 70%, 0.5);
+}
+
 *,
 *::after,
 *::before {
