@@ -30,7 +30,7 @@ export const WritingLayout: React.FC<Props> = ({
               />
               <span>Alexey Miin</span>
             </div>
-            <span className={s.bullet}>&bull;</span>
+            <span>&bull;</span>
             <span>{format(new Date(date), 'MMMM d, yyyy')}</span>
           </div>
           <div>{readingTime}</div>
