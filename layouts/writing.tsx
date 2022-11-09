@@ -27,9 +27,8 @@ export const WritingLayout: React.FC<Props> = ({
                 alt="Profile Image"
                 width={32}
                 height={32}
-                className={s.img}
               />
-              <span className={s.author}>Alexey Miin</span>
+              <span>Alexey Miin</span>
             </div>
             <span className={s.bullet}>&bull;</span>
             <span>{format(new Date(date), 'MMMM d, yyyy')}</span>

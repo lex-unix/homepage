@@ -7,9 +7,9 @@
   flex-direction: column;
 }
 
-.post {
-  padding: var(--space2);
+.container {
   margin: 0 calc(var(--space2) * -1);
+  padding: var(--space2);
   border-radius: 6px;
   border-top: 1px solid var(--grayA3);
 
@@ -33,6 +33,9 @@
   &:hover + & {
     border-top: 0;
   }
+}
+
+.item {
 }
 
 .description {

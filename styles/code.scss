@@ -22,25 +22,25 @@ pre {
 }
 
 .token.keyword {
-  color: #add7ff;
+  color: var(--code2);
 }
 
 .token.string,
 .token.boolean {
-  color: #5de4c7;
+  color: var(--code1);
 }
 
 .token.punctuation {
-  color: #f087bd;
+  color: var(--code3);
 }
 
 .token.function,
 .token.class-name,
 .token.builtin,
 .token.operator {
-  color: #89ddff;
+  color: var(--code4);
 }
 
 .token.comment {
-  color: var(--gray9);
+  color: var(--code5);
 }

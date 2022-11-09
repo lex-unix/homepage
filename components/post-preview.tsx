@@ -10,8 +10,8 @@ interface Props {
 
 const PostPreview: React.FC<Props> = ({ title, description, slug }) => {
   return (
-    <Link href={`/writing/${slug}`}>
-      <article className={s.post}>
+    <Link href={`/writing/${slug}`} className={s.container}>
+      <article className={s.item}>
         <p>{title}</p>
         <p className={s.description}>{description}</p>
       </article>
