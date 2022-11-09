@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/future/image'
+import Image from 'next/image'
 import s from '@/styles/tool.module.scss'
 
 interface Props {
@@ -14,7 +14,7 @@ const Tool: React.FC<Props> = ({ name, description, href, src }) => {
   return (
     <div className={s.tool}>
       <Link href={href} target="_blank" rel="noopener noreferrer">
-        <a className={s.link} target="_blank" rel="noopener noreferrer">
+        <li className={s.link}>
           <div className={s['image-container']}>
             <Image src={src} alt={name} width={48} height={48} />
             <Image
@@ -29,7 +29,7 @@ const Tool: React.FC<Props> = ({ name, description, href, src }) => {
             <p>{name}</p>
             <p className={s.description}>{description}</p>
           </div>
-        </a>
+        </li>
       </Link>
     </div>
   )
