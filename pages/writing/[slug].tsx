@@ -1,3 +1,4 @@
+import { components } from '@/components/mdx'
 import { WritingLayout } from '@/layouts/writing'
 import { mdxToHtml } from '@/lib/mdx'
 import { postQuery, postSlugsQuery } from '@/lib/queries'
@@ -9,7 +10,7 @@ import { MDXRemote } from 'next-mdx-remote'
 export default function SingleWriting({ post }: { post: Post }) {
   return (
     <WritingLayout {...post}>
-      <MDXRemote {...post.content} />
+      <MDXRemote {...post.content} components={components} />
     </WritingLayout>
   )
 }
