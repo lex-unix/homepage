@@ -8,4 +8,5 @@ export type Post = {
   description: string
   content: MDXRemoteSerializeResult
   date: string
+  readingTime: string
 }

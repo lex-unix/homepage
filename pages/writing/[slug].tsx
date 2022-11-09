@@ -34,13 +34,14 @@ export const getStaticProps: GetStaticProps = async ({
     return { notFound: true }
   }
 
-  const html = await mdxToHtml(post.content)
+  const { html, readingTime } = await mdxToHtml(post.content)
 
   return {
     props: {
       post: {
         ...post,
-        content: html
+        content: html,
+        readingTime
       }
     }
   }
