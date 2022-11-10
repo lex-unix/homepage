@@ -3,17 +3,18 @@
   max-width: 720px;
   margin-right: auto;
   margin-left: auto;
-  padding: var(--space5) var(--space2) 0;
+  padding: var(--space3) var(--space2) 0;
   display: flex;
   justify-content: right;
 }
 
 .button {
-  padding: 12px;
-  border-radius: 12px;
+  padding: 10px;
+  border-radius: 10px;
   background-color: transparent;
   cursor: pointer;
   transition: 0.25s ease-in-out;
+  transition-property: background-color;
 }
 
 .button:hover {
