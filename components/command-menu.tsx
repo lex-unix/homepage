@@ -160,6 +160,7 @@ const CommandItem: React.FC<CommandItemProps> = ({
     <Command.Item
       onSelect={handleSelectAndClick}
       onClick={handleSelectAndClick}
+      value={name}
     >
       {icon} {name}
     </Command.Item>
