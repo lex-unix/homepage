@@ -12,7 +12,7 @@ export default function Writing({
   return (
     <Container title="Writing">
       <p className={s.heading}>Place for sharing my thoughts and other stuff</p>
-      <div className={s.posts}>
+      <ul className={s.list}>
         {posts.map(post => (
           <PostPreview
             key={post._id}
@@ -31,7 +31,7 @@ export default function Writing({
           description="Your Google calendar right in Telegram"
           slug="3"
         />
-      </div>
+      </ul>
     </Container>
   )
 }
