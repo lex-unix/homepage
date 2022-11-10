@@ -1,13 +1,21 @@
 import Container from '@/components/container'
 import Tool from '@/components/tool'
 import type { NextPage } from 'next'
-import s from '@/styles/tool.module.scss'
+import s from '@/styles/dashboard.module.scss'
+import useSWR from 'swr'
+import type { Playlist, Track } from '@/lib/types'
+import fetcher from '@/lib/fetcher'
+import PlaylistItem from '@/components/playlist'
+import TrackItem from '@/components/track'
 
-const Tools: NextPage = () => {
+const Dashboard: NextPage = () => {
+  const { data: playlists } = useSWR<Playlist[]>('/api/playlists', fetcher)
+  const { data: topTracks } = useSWR<Track[]>('/api/top-tracks', fetcher)
+
   return (
     <Container title="Tools">
       <p className={s.heading}>Tools i use everyday</p>
-      <div className={s['tools-list']}>
+      <ul className={s.list}>
         <Tool
           name="Arc"
           description="Browser of choice"
@@ -53,12 +61,32 @@ const Tools: NextPage = () => {
         <Tool
           name="Spark"
           description="Mail client"
-          href="https://sparkmailapp.com//"
+          href="https://sparkmailapp.com/"
           src="/tools/spark.png"
         />
-      </div>
+      </ul>
+      {playlists && (
+        <>
+          <p className={s.heading}>Daily dose of music</p>
+          <ul className={s.list}>
+            {playlists.map(playlist => (
+              <PlaylistItem key={playlist.name} {...playlist} />
+            ))}
+          </ul>
+        </>
+      )}
+      {topTracks && (
+        <>
+          <p className={s.heading}>My top tracks at the momement</p>
+          <ul className={s.list}>
+            {topTracks.map(track => (
+              <TrackItem key={track.name} {...track} />
+            ))}
+          </ul>
+        </>
+      )}
     </Container>
   )
 }
 
-export default Tools
+export default Dashboard
