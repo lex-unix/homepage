@@ -11,16 +11,21 @@ interface Props {
 
 const ProjectItem: React.FC<Props> = ({ name, description, href, year }) => {
   return (
-    <Link href={href} target="_blank" rel="noreferrer noopener">
-      <li className={s.item}>
+    <li>
+      <a
+        href={href}
+        target="_blank"
+        rel="noreferrer noopener"
+        className={s.item}
+      >
         <p>
           {name}
           <span className={s.description}>{description}</span>
         </p>
         <div className={s.line}></div>
         <p>{year}</p>
-      </li>
-    </Link>
+      </a>
+    </li>
   )
 }
 

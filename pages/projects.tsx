@@ -6,8 +6,10 @@ import s from '@/styles/projects.module.scss'
 const ProjectsPage: NextPage = () => {
   return (
     <Container title="Projects">
-      <p>Stuff I built using React, React Native, Next.js, and TypeScript</p>
-      <div className={s.list}>
+      <p className={s.heading}>
+        Stuff I built using React, React Native, Next.js, and TypeScript
+      </p>
+      <ul className={s.list}>
         <ProjectItem
           name="KYI"
           description="Find all Kyiv events in one app"
@@ -32,7 +34,7 @@ const ProjectsPage: NextPage = () => {
           href="https://mariner.kyivangels.com"
           year={2022}
         />
-      </div>
+      </ul>
     </Container>
   )
 }
