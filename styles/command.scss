@@ -7,20 +7,14 @@
 }
 
 [cmdk-root] {
-  max-width: 640px;
-  width: 100%;
-  background: var(--gray1);
+  height: 100%;
   border-radius: 12px;
+  background: var(--gray1);
   padding: 8px 0;
   font-family: var(--font-sans);
-  border: 1px solid var(--gray6);
-  position: fixed;
-  top: 10%;
-  z-index: 10000;
 
   .dark & {
     background: var(--gray2);
-    border: 0;
   }
 }
 
@@ -118,24 +112,66 @@
 }
 
 [cmdk-dialog] {
-  width: full;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
+  max-width: 640px;
+  width: 100%;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  z-index: 10000;
+  transform: translateX(-50%);
+  transform-origin: 50% center;
+  will-change: transform;
+
+  animation-duration: 0.2s;
+  animation-timing-function: ease;
+
+  &[data-state='open'] {
+    animation-name: slideIn;
+  }
+
+  &[data-state='closed'] {
+    animation-name: slideOut;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%) scale(0.97);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translatex(-50%) scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: translatex(-50%) scale(0.97);
+  }
 }
 
 @media (max-width: 640px) {
-  [cmdk-root] {
-    top: 25%;
+  [cmdk-dialog] {
     bottom: 0;
+    top: 25%;
+  }
+
+  [cmdk-root] {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }
 }
 
-@media (max-width: 768px) {
-  [cmdk-root] {
+@media (min-height: 1100px) {
+  [cmdk-dialog] {
     top: 20%;
   }
 }

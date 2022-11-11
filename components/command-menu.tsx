@@ -58,12 +58,18 @@ const CommandMenu: React.FC = () => {
       {
         name: 'GitHub',
         icon: <GitHubIcon />,
-        cb: () => window.open('https://github.com/lex-unix', '_blank')
+        cb: () =>
+          window.open(
+            'https://github.com/lex-unix',
+            '_blank',
+            'noopener, noreferrer'
+          )
       },
       {
         name: 'Twitter',
         icon: <TwitterIcon />,
-        cb: () => window.open('https://twitter.com', '_blank')
+        cb: () =>
+          window.open('https://twitter.com', '_blank', 'noopener, noreferrer')
       }
     ],
     [router]
