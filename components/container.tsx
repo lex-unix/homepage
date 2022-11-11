@@ -17,6 +17,7 @@ const Container: React.FC<Props> = ({ title, description, type, children }) => {
     <>
       <Head>
         <title>{t}</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="author" content="Alexey Miin" />
         <meta name="description" content={description} />
         <meta

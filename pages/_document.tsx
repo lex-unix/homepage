@@ -5,7 +5,6 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta name="theme-color" content="hsl(240, 100%, 82%)" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <link
           rel="preload"
           href="/fonts/inter-var-latin.woff2"
