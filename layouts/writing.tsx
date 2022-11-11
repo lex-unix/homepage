@@ -17,7 +17,7 @@ export const WritingLayout: React.FC<Props> = ({
   children
 }) => {
   return (
-    <Container title={title} description={description}>
+    <Container title={title} description={description} type="article">
       <article className={s.post}>
         <h1>{title}</h1>
         <div className={s['header-container']}>

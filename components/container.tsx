@@ -30,7 +30,7 @@ const Container: React.FC<Props> = ({ title, description, type, children }) => {
         />
         <meta property="og:title" content={t} />
         <meta property="og:site_name" content="lexunix.dev" />
-        <meta property="og:type" content={`${type ? type : 'website'}`} />
+        {type && <meta property="og:type" content={type} />}
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="canonical"
