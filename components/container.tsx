@@ -22,19 +22,19 @@ const Container: React.FC<Props> = ({ title, description, type, children }) => {
         <meta name="description" content={description} />
         <meta
           property="og:url"
-          content={`https://lex-unix.kyivangels.com${router.asPath}`}
+          content={`https://lex.kyivangels.com${router.asPath}`}
         />
         <meta
           property="og:image"
           content="https://lex.kyivangels.com/lex-unix-og.png"
         />
         <meta property="og:title" content={t} />
-        <meta property="og:site_name" content="Lex Unix" />
+        <meta property="og:site_name" content="lexunix.dev" />
         <meta property="og:type" content={`${type ? type : 'website'}`} />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="canonical"
-          href={`https://lex-unix.kyivangels.com${router.asPath}`}
+          href={`https://lex.kyivangels.com${router.asPath}`}
         />
       </Head>
       <main className="main">{children}</main>
