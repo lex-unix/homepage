@@ -76,7 +76,7 @@
 }
 
 [cmdk-list] {
-  height: calc(var(--cmdk-list-height) + 35px);
+  height: calc(var(--cmdk-list-height) + 28px);
   max-height: 392px;
   padding: 0 8px;
   padding-bottom: 20px;
@@ -128,5 +128,13 @@
   [cmdk-root] {
     top: 25%;
     bottom: 0;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  [cmdk-root] {
+    top: 20%;
   }
 }
