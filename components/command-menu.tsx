@@ -93,48 +93,41 @@ const CommandMenu: React.FC = () => {
   })
 
   return (
-    <>
-      {isOpen && <div className="cmd-container"></div>}
-      <Command.Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <Command.Input placeholder="Search" />
-        <Command.Separator />
-        <Command.List>
-          <Command.Empty>No results found.</Command.Empty>
-          <Command.Group heading="Page">
-            {pages.map(page => (
-              <CommandItem
-                key={page.name}
-                {...page}
-                onClick={handleItemClick}
-              />
-            ))}
-          </Command.Group>
-          <Command.Group heading="Socials">
-            {socials.map(social => (
-              <CommandItem
-                key={social.name}
-                {...social}
-                onClick={handleItemClick}
-              />
-            ))}
-          </Command.Group>
-          <Command.Group heading="Theme">
+    <Command.Dialog open={isOpen} onOpenChange={setIsOpen}>
+      <Command.Input placeholder="Search" />
+      <Command.Separator />
+      <Command.List>
+        <Command.Empty>No results found.</Command.Empty>
+        <Command.Group heading="Page">
+          {pages.map(page => (
+            <CommandItem key={page.name} {...page} onClick={handleItemClick} />
+          ))}
+        </Command.Group>
+        <Command.Group heading="Socials">
+          {socials.map(social => (
             <CommandItem
-              name={`Change Theme to ${theme === 'light' ? 'Dark' : 'Light'}`}
-              icon={theme === 'light' ? <MoonIcon /> : <SunIcon />}
-              cb={toggleTheme}
+              key={social.name}
+              {...social}
               onClick={handleItemClick}
             />
-            <CommandItem
-              name="Change Theme to System"
-              icon={<SystemIcon />}
-              cb={() => setTheme(systemTheme ? systemTheme : 'light')}
-              onClick={handleItemClick}
-            />
-          </Command.Group>
-        </Command.List>
-      </Command.Dialog>
-    </>
+          ))}
+        </Command.Group>
+        <Command.Group heading="Theme">
+          <CommandItem
+            name={`Change Theme to ${theme === 'light' ? 'Dark' : 'Light'}`}
+            icon={theme === 'light' ? <MoonIcon /> : <SunIcon />}
+            cb={toggleTheme}
+            onClick={handleItemClick}
+          />
+          <CommandItem
+            name="Change Theme to System"
+            icon={<SystemIcon />}
+            cb={() => setTheme(systemTheme ? systemTheme : 'light')}
+            onClick={handleItemClick}
+          />
+        </Command.Group>
+      </Command.List>
+    </Command.Dialog>
   )
 }
 

@@ -1,8 +1,9 @@
-.cmd-container {
+[cmdk-overlay] {
   position: fixed;
   inset: 0px;
   background-color: var(--overlay);
   z-index: 100;
+  backdrop-filter: blur(2.5px);
 }
 
 [cmdk-root] {

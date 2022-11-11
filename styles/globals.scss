@@ -83,7 +83,9 @@ a {
   --lowContrast: #ffffff;
   --highContrast: #000000;
 
-  --overlay: hsla(0, 0%, 17%, 0.7);
+  --overlay: hsla(0, 0%, 54%, 0.7);
+
+  --link: hsl(327, 88%, 59%);
 
   --gray1: hsl(0, 0%, 99%);
   --gray2: hsl(0, 0%, 97.3%);
@@ -103,8 +105,6 @@ a {
   --code3: hsl(329, 88%, 54%);
   --code4: hsl(197, 92%, 42%);
   --code5: var(--gray9);
-
-  --link: hsl(327, 88%, 59%);
 
   --grayA1: hsla(0, 0%, 0%, 0.012);
   --grayA2: hsla(0, 0%, 0%, 0.027);
@@ -130,7 +130,8 @@ a {
   --lowContrast: #000000;
   --highContrast: #ffffff;
 
-  --overlay: hsla(0, 0%, 5%, 0.7);
+  --overlay: hsla(0, 0%, 6.6%, 0.7);
+  --link: hsl(327, 88%, 74%);
 
   --gray1: hsl(0, 0%, 8.5%);
   --gray2: hsl(0, 0%, 11%);
@@ -150,8 +151,6 @@ a {
   --code3: hsl(329, 78%, 74%);
   --code4: hsl(197, 100%, 77%);
   --code5: var(--gray9);
-
-  --link: hsl(327, 88%, 74%);
 
   --grayA1: hsla(0, 0%, 100%, 0);
   --grayA2: hsla(0, 0%, 100%, 0.026);
