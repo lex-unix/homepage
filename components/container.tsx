@@ -24,7 +24,10 @@ const Container: React.FC<Props> = ({ title, description, type, children }) => {
           property="og:url"
           content={`https://lex-unix.kyivangels.com${router.asPath}`}
         />
-        <meta property="og:image" content="/lex-unix-og.png" />
+        <meta
+          property="og:image"
+          content="https://lex.kyivangels.com/lex-unix-og.png"
+        />
         <meta property="og:title" content={t} />
         <meta property="og:site_name" content="Lex Unix" />
         <meta property="og:type" content={`${type ? type : 'website'}`} />
