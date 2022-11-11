@@ -13,7 +13,10 @@ const Dashboard: NextPage = () => {
   const { data: topTracks } = useSWR<Track[]>('/api/top-tracks', fetcher)
 
   return (
-    <Container title="Tools">
+    <Container
+      title="Dashboard"
+      description="Spotify music and favourite tools"
+    >
       <p className={s.heading}>Tools i use everyday</p>
       <ul className={s.list}>
         <Tool

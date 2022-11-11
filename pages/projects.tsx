@@ -5,7 +5,10 @@ import s from '@/styles/projects.module.scss'
 
 const ProjectsPage: NextPage = () => {
   return (
-    <Container title="Projects">
+    <Container
+      title="Projects"
+      description="Stuff I built using React, React Native, Next.js, and TypeScript"
+    >
       <p className={s.heading}>
         Stuff I built using React, React Native, Next.js, and TypeScript
       </p>

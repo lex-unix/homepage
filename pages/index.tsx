@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
-    <Container>
+    <Container description="Computer Science student from Kyiv, Ukraine. Building web and mobile applications">
       <div className={s.info}>
         <div className={s['img-container']}>
           <Image

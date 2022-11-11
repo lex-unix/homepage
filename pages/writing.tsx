@@ -10,7 +10,10 @@ export default function Writing({
   posts
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <Container title="Writing">
+    <Container
+      title="Writing"
+      description="Place for sharing my thoughts and other stuff"
+    >
       <p className={s.heading}>Place for sharing my thoughts and other stuff</p>
       <ul className={s.list}>
         {posts.map(post => (

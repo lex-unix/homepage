@@ -11,12 +11,13 @@ interface Props extends Post {
 
 export const WritingLayout: React.FC<Props> = ({
   title,
+  description,
   date,
   readingTime,
   children
 }) => {
   return (
-    <Container title={title}>
+    <Container title={title} description={description}>
       <article className={s.post}>
         <h1>{title}</h1>
         <div className={s['header-container']}>
