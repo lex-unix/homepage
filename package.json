@@ -13,6 +13,7 @@
   "dependencies": {
     "@sanity/image-url": "^1.0.1",
     "@sanity/webhook": "^2.0.0",
+    "@vercel/analytics": "^0.1.4",
     "cmdk": "0.1.20",
     "date-fns": "^2.29.3",
     "jotai": "^1.9.2",

@@ -6,6 +6,7 @@ specifiers:
   '@types/node': 18.11.0
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
+  '@vercel/analytics': ^0.1.4
   cmdk: 0.1.20
   date-fns: ^2.29.3
   eslint: 8.25.0
@@ -32,6 +33,7 @@ specifiers:
 dependencies:
   '@sanity/image-url': 1.0.1
   '@sanity/webhook': 2.0.0
+  '@vercel/analytics': 0.1.4_react@18.2.0
   cmdk: 0.1.20_rj7ozvcq3uehdlnj3cbwzbi5ce
   date-fns: 2.29.3
   jotai: 1.9.2_3lzqd2prgnu7gkxqqdmtvzna5u
@@ -581,7 +583,7 @@ packages:
       '@motionone/types': 10.14.0
       '@motionone/utils': 10.14.0
       hey-listen: 1.0.8
-      tslib: 2.4.0
+      tslib: 2.4.1
     dev: false
 
   /@motionone/easing/10.14.0:
@@ -1649,6 +1651,14 @@ packages:
     transitivePeerDependencies:
       - '@types/react'
       - supports-color
+    dev: false
+
+  /@vercel/analytics/0.1.4_react@18.2.0:
+    resolution: {integrity: sha512-6xI1kozfgigwmDTQCrtj+m0yQnzhLGa/l0yE8BjTbUQ2vF9b88CEXF3dXjZl48ESfjssCur3FkK3jOwZm4emrw==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@vitejs/plugin-react/2.2.0_vite@3.2.3:
