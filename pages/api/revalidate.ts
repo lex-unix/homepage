@@ -43,8 +43,8 @@ export default async function handler(
   try {
     const slug = await sanityClient.fetch(postUpdateQuery, { id })
     await Promise.all([
-      res.revalidate('/posts'),
-      res.revalidate(`/posts/${slug}`)
+      res.revalidate('/writing'),
+      res.revalidate(`/writing/${slug}`)
     ])
     return res.status(200).json({ message: `Updated ${slug}` })
   } catch (err: any) {
