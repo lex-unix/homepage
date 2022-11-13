@@ -10,7 +10,7 @@ interface Props extends Post {
   children: React.ReactNode
 }
 
-export const WritingLayout: React.FC<Props> = ({
+const PostLayut: React.FC<Props> = ({
   title,
   description,
   date,
@@ -48,3 +48,5 @@ export const WritingLayout: React.FC<Props> = ({
     </Container>
   )
 }
+
+export default PostLayut

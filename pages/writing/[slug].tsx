@@ -1,5 +1,5 @@
 import { components } from '@/components/mdx'
-import { WritingLayout } from '@/layouts/writing'
+import PostLayout from '@/layouts/post'
 import { mdxToHtml } from '@/lib/mdx'
 import { postQuery, postSlugsQuery } from '@/lib/queries'
 import { getClient, sanityClient } from '@/lib/sanity-server'
@@ -9,9 +9,9 @@ import { MDXRemote } from 'next-mdx-remote'
 
 export default function SingleWriting({ post }: { post: Post }) {
   return (
-    <WritingLayout {...post}>
+    <PostLayout {...post}>
       <MDXRemote {...post.content} components={components} />
-    </WritingLayout>
+    </PostLayout>
   )
 }
 
