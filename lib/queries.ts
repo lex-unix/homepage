@@ -24,3 +24,9 @@ export const postQuery = `
 export const postSlugsQuery = `
 *[_type == "post" && defined(slug.current)][].slug.current
 `
+
+export const postBySlugQuery = `
+*[_type == "post" && defined(slug.current)][].slug.current
+`
+
+export const postUpdateQuery = `*[_type == "post" && _id == $id].slug.current`
