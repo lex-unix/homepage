@@ -10,15 +10,15 @@ interface Props {
   children: React.ReactNode
 }
 
-const Container: React.FC<Props> = ({
-  title,
-  description,
-  image,
-  type,
-  children
-}) => {
+const Container: React.FC<Props> = props => {
+  const { children, title, description, ...otherMeta } = props
   const router = useRouter()
   const t = title ? `${title} - Lex Unix` : 'Lex Unix'
+  const meta = {
+    image: 'https://lex.kyivangels.com/lex-unix-og.png',
+    type: 'website',
+    ...otherMeta
+  }
 
   return (
     <>
@@ -31,15 +31,14 @@ const Container: React.FC<Props> = ({
           property="og:url"
           content={`https://lex.kyivangels.com${router.asPath}`}
         />
-        <meta
-          property="og:image"
-          content={`${
-            image ? image : 'https://lex.kyivangels.com/lex-unix-og.png'
-          }`}
-        />
+        <meta property="og:image" content={meta.image} />
         <meta property="og:title" content={t} />
         <meta property="og:site_name" content="lexunix.dev" />
-        {type && <meta property="og:type" content={type} />}
+        <meta property="og:type" content={meta.type} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={meta.image} />
         <link
           rel="canonical"
           href={`https://lex.kyivangels.com${router.asPath}`}
