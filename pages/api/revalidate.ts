@@ -21,7 +21,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  console.log('Revalidating...')
   const signature = req.headers[SIGNATURE_HEADER_NAME] as string
   const body = await readBody(req)
   if (
