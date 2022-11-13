@@ -3,12 +3,12 @@ const postFields = `
   title,
   date,
   coverImage,
+  description,
   "slug": slug.current
 `
 
 export const allPostsQuery = `
   *[_type == "post"] | order(date desc, _updatedAt desc) {
-  description,
   ${postFields}
 }`
 

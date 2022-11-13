@@ -18,6 +18,7 @@ const PostLayut: React.FC<Props> = ({
   coverImage,
   children
 }) => {
+  console.log(description)
   return (
     <Container
       title={title}
