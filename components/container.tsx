@@ -5,11 +5,18 @@ import React from 'react'
 interface Props {
   title?: string
   description: string
+  image?: string
   type?: string
   children: React.ReactNode
 }
 
-const Container: React.FC<Props> = ({ title, description, type, children }) => {
+const Container: React.FC<Props> = ({
+  title,
+  description,
+  image,
+  type,
+  children
+}) => {
   const router = useRouter()
   const t = title ? `${title} - Lex Unix` : 'Lex Unix'
 
@@ -26,7 +33,9 @@ const Container: React.FC<Props> = ({ title, description, type, children }) => {
         />
         <meta
           property="og:image"
-          content="https://lex.kyivangels.com/lex-unix-og.png"
+          content={`${
+            image ? image : 'https://lex.kyivangels.com/lex-unix-og.png'
+          }`}
         />
         <meta property="og:title" content={t} />
         <meta property="og:site_name" content="lexunix.dev" />

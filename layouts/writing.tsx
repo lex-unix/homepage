@@ -4,6 +4,7 @@ import React from 'react'
 import s from '@/styles/post.module.scss'
 import Image from 'next/image'
 import { format } from 'date-fns'
+import { urlForImage } from '@/lib/sanity'
 
 interface Props extends Post {
   children: React.ReactNode
@@ -14,10 +15,16 @@ export const WritingLayout: React.FC<Props> = ({
   description,
   date,
   readingTime,
+  coverImage,
   children
 }) => {
   return (
-    <Container title={title} description={description} type="article">
+    <Container
+      title={title}
+      description={description}
+      image={urlForImage(coverImage).url()}
+      type="article"
+    >
       <article className={s.post}>
         <h1>{title}</h1>
         <div className={s['header-container']}>
