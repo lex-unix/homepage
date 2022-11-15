@@ -70,7 +70,7 @@ const Dashboard: NextPage = () => {
       </ul>
       {playlists && (
         <>
-          <p className={s.heading}>Daily dose of music</p>
+          <p className={s.heading}>My spotify playlists</p>
           <ul className={s.list}>
             {playlists.map(playlist => (
               <PlaylistItem key={playlist.name} {...playlist} />
@@ -80,7 +80,7 @@ const Dashboard: NextPage = () => {
       )}
       {topTracks && (
         <>
-          <p className={s.heading}>My top tracks at the momement</p>
+          <p className={s.heading}>Spoify most played songs</p>
           <ul className={s.list}>
             {topTracks.map(track => (
               <TrackItem key={track.name} {...track} />
