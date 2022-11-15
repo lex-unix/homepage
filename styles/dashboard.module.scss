@@ -12,8 +12,8 @@
   display: flex;
   flex-direction: column;
 
-  & + & {
-    padding-top: var(--space3);
+  & + .heading {
+    margin-top: var(--space6);
   }
 }
 
