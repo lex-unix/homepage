@@ -15,7 +15,7 @@ const Container: React.FC<Props> = props => {
   const router = useRouter()
   const t = title ? `${title} - Lex Unix` : 'Lex Unix'
   const meta = {
-    image: 'https://lex.kyivangels.com/lex-unix-og.png',
+    image: 'https://lexunix.me/lex-unix-og.png',
     type: 'website',
     ...otherMeta
   }
@@ -29,20 +29,17 @@ const Container: React.FC<Props> = props => {
         <meta name="description" content={description} />
         <meta
           property="og:url"
-          content={`https://lex.kyivangels.com${router.asPath}`}
+          content={`https://lexunix.me${router.asPath}`}
         />
         <meta property="og:image" content={meta.image} />
         <meta property="og:title" content={t} />
-        <meta property="og:site_name" content="lexunix.dev" />
+        <meta property="og:site_name" content="lexunix.me" />
         <meta property="og:type" content={meta.type} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={meta.image} />
-        <link
-          rel="canonical"
-          href={`https://lex.kyivangels.com${router.asPath}`}
-        />
+        <link rel="canonical" href={`https://lexunix.me${router.asPath}`} />
       </Head>
       <main className="main">{children}</main>
     </>
