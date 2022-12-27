@@ -8,7 +8,11 @@ const Navbar: React.FC = () => {
   const [open, setOpen] = useAtom(commandState)
   return (
     <div className={s.nav}>
-      <button className={s.button} onClick={() => setOpen(!open)}>
+      <button
+        aria-label="Menu"
+        className={s.button}
+        onClick={() => setOpen(!open)}
+      >
         <CommandIcon />
       </button>
     </div>
