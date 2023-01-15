@@ -34,7 +34,7 @@ const ProjectsPage: NextPage = () => {
         <ProjectItem
           name="Mariner"
           description="Website for luxury yachts and apartments in Croatia"
-          href="https://mariner.kyivangels.com"
+          href="https://www.marinercroatia.net"
           year={2022}
         />
       </ul>
