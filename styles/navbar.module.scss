@@ -13,12 +13,16 @@
   border-radius: 10px;
   background-color: transparent;
   cursor: pointer;
-  transition: 0.25s ease-in-out;
-  transition-property: background-color;
-}
+  transition: background-color 200ms ease, box-shadow 200ms ease;
 
-.button:hover {
-  background-color: var(--grayA4);
+  &:focus {
+    box-shadow: 0 0 0 3px var(--grayA4);
+    outline: none;
+  }
+
+  &:hover {
+    background-color: var(--grayA4);
+  }
 }
 
 .nav svg path {
