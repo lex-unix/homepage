@@ -170,6 +170,10 @@
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }
+
+  [cmdk-list] {
+    max-width: none;
+  }
 }
 
 @media (min-height: 1100px) {
