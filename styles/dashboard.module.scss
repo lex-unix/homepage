@@ -23,6 +23,8 @@
   padding-right: var(--space2);
   padding-left: var(--space2);
   border-radius: 6px;
+  background: transparent;
+  transition: background 150ms ease;
 
   & .text-container {
     border-top: 1px solid var(--grayA3);
@@ -76,7 +78,7 @@
 @media (hover: hover) {
   .list-item {
     &:hover {
-      background-color: var(--grayA4);
+      background-color: var(--grayA3);
     }
 
     &:hover .text-container,
