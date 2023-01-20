@@ -12,6 +12,7 @@
   background: var(--gray1);
   padding: 8px 0;
   font-family: var(--font-sans);
+  box-shadow: 0 16px 20px hsla(0, 0%, 0%, 20%);
 
   .dark & {
     background: var(--gray2);
@@ -47,9 +48,7 @@
   color: var(--gray10);
   font-weight: 400;
   user-select: none;
-  will-change: background, color;
-  transition: all 150ms ease;
-  transition-property: none;
+  transition: background 100ms ease, color 100ms ease;
 
   @media (hover: hover) {
     &[aria-selected='true'] {
