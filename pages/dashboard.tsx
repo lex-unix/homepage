@@ -62,10 +62,10 @@ const Dashboard: NextPage = () => {
           src="/tools/spotify.png"
         />
         <Tool
-          name="Spark"
+          name="Mimestream"
           description="Mail client"
-          href="https://sparkmailapp.com/"
-          src="/tools/spark.png"
+          href="https://mimestream.com/"
+          src="/tools/mimestream.png"
         />
       </ul>
       {playlists && (
