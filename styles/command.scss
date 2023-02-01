@@ -1,3 +1,30 @@
+.command-input {
+  display: flex;
+  align-items: center;
+}
+
+.command-input__button {
+  margin-right: 16px;
+  margin-left: 16px;
+  background: var(--grayA3);
+  border-radius: 4px;
+  padding: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  color: var(--gray10);
+  transition: color 150ms ease;
+
+  &:hover {
+    color: var(--gray12);
+  }
+}
+
+.command-input__kdb {
+  font-size: 12px;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+}
+
 [cmdk-overlay] {
   position: fixed;
   inset: 0px;
@@ -24,7 +51,7 @@
   border: none;
   width: 100%;
   font-size: 20px;
-  padding: 8px 16px;
+  padding: 8px 0 8px 16px;
   outline: none;
   background: transparent;
   color: var(--gray12);

@@ -100,7 +100,15 @@ const CommandMenu: React.FC = () => {
 
   return (
     <Command.Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <Command.Input placeholder="Search" />
+      <div className="command-input">
+        <Command.Input placeholder="Search" />
+        <button
+          className="command-input__button"
+          onClick={() => setIsOpen(false)}
+        >
+          <kbd className="command-input__kdb">esc</kbd>
+        </button>
+      </div>
       <Command.Separator />
       <Command.List>
         <Command.Empty>No results found.</Command.Empty>
