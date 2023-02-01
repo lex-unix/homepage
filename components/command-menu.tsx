@@ -17,6 +17,10 @@ import {
 } from './icons'
 import { commandState } from '@/states/command-menu'
 
+const externalLink = (url: string) => {
+  return () => window.open(url, '_blank', 'noopener noreferrer')
+}
+
 const CommandMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useAtom(commandState)
   const { theme, setTheme, systemTheme } = useTheme()
@@ -58,18 +62,12 @@ const CommandMenu: React.FC = () => {
       {
         name: 'GitHub',
         icon: <GitHubIcon />,
-        cb: () =>
-          window.open(
-            'https://github.com/lex-unix',
-            '_blank',
-            'noopener, noreferrer'
-          )
+        cb: externalLink('https://github.com/lex-unix')
       },
       {
         name: 'Twitter',
         icon: <TwitterIcon />,
-        cb: () =>
-          window.open('https://twitter.com', '_blank', 'noopener, noreferrer')
+        cb: externalLink('https://twitter.com')
       }
     ],
     [router]
@@ -86,7 +84,7 @@ const CommandMenu: React.FC = () => {
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === 'k' && e.metaKey) {
-        setIsOpen(!isOpen)
+        setIsOpen(open => !open)
       }
 
       if (e.key === 'Enter') {
@@ -96,7 +94,7 @@ const CommandMenu: React.FC = () => {
 
     document.addEventListener('keydown', down)
     return () => document.removeEventListener('keydown', down)
-  })
+  }, [setIsOpen])
 
   return (
     <Command.Dialog open={isOpen} onOpenChange={setIsOpen}>
