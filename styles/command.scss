@@ -77,16 +77,14 @@
   user-select: none;
   transition: background 100ms ease, color 100ms ease;
 
-  @media (hover: hover) {
-    &[aria-selected='true'] {
-      background: var(--gray4);
-      color: var(--gray12);
-    }
+  &[aria-selected='true'] {
+    background: var(--gray4);
+    color: var(--gray12);
+  }
 
-    &:active {
-      transition-property: background;
-      background: var(--gray4);
-    }
+  &:active {
+    transition-property: background;
+    background: var(--gray4);
   }
 
   &:first-child {
