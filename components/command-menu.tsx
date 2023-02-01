@@ -51,7 +51,7 @@ const CommandMenu: React.FC = () => {
   const socials = useMemo(
     () => [
       {
-        name: 'Emal',
+        name: 'Email',
         icon: <EmailIcon />,
         cb: () => router.push('mailto:alexmiyin@gmail.com')
       },
