@@ -70,6 +70,13 @@
   font-size: 16px;
 }
 
+.post p > code {
+  padding: 2px 4px;
+  background: var(--gray4);
+  border: 1px solid var(--gray6);
+  border-radius: 2px;
+}
+
 @media only screen and (max-width: 640px) {
   .post {
     margin-bottom: var(--space2);
