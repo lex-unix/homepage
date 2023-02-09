@@ -31,6 +31,10 @@ export default function Document() {
           sizes="32x32"
           href="/favicons/favicon-32x32.png"
         />
+        <meta
+          name="google-site-verification"
+          content="JCEgjAQRHGhsSTTuLbS94vMrAaXfiRZVqDwCFB-kpm4"
+        />
       </Head>
       <body>
         <Main />
