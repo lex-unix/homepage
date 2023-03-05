@@ -12,7 +12,6 @@ import {
   SunIcon,
   SystemIcon,
   DashboardIcon,
-  TwitterIcon,
   WritingIcon
 } from './icons'
 import { commandState } from '@/states/command-menu'
@@ -63,11 +62,6 @@ const CommandMenu: React.FC = () => {
         name: 'GitHub',
         icon: <GitHubIcon />,
         cb: externalLink('https://github.com/lex-unix')
-      },
-      {
-        name: 'Twitter',
-        icon: <TwitterIcon />,
-        cb: externalLink('https://twitter.com')
       }
     ],
     [router]
