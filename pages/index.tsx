@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Container from '@/components/container'
 import s from '@/styles/index.module.scss'
 import Image from 'next/image'
+import profileImage from '../public/profile.png'
 
 const Home: NextPage = () => {
   return (
@@ -9,7 +10,8 @@ const Home: NextPage = () => {
       <div className={s.info}>
         <div className={s['img-container']}>
           <Image
-            src="/profile.png"
+            src={profileImage}
+            placeholder="blur"
             alt="Profile"
             width={100}
             height={64}

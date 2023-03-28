@@ -5,6 +5,14 @@ import useSWR from 'swr'
 import type { Playlist, Track } from '@/lib/types'
 import fetcher from '@/lib/fetcher'
 import MediaListItem from '@/components/media-list-item'
+import arcThumb from '@/public/tools/arc.png'
+import raycastThumb from '@/public/tools/raycast.png'
+import itermThumb from '@/public/tools/iterm.png'
+import inkdropThumb from '@/public/tools/inkdrop.png'
+import cronThumb from '@/public/tools/cron.png'
+import todoistThumb from '@/public/tools/todoist.png'
+import spotifyThumb from '@/public/tools/spotify.png'
+import mimestreamThumb from '@/public/tools/mimestream.png'
 
 const Dashboard: NextPage = () => {
   const { data: playlists } = useSWR<Playlist[]>('/api/playlists', fetcher)
@@ -17,55 +25,51 @@ const Dashboard: NextPage = () => {
     >
       <p className={s.heading}>Tools i use everyday</p>
       <ul className={s.list}>
-        <MediaListItem title="Arc" href="https://arc.net/" src="/tools/arc.png">
+        <MediaListItem title="Arc" href="https://arc.net/" src={arcThumb}>
           Browser of choice
         </MediaListItem>
         <MediaListItem
           title="Raycast"
           href="https://raycast.com/"
-          src="/tools/raycast.png"
+          src={raycastThumb}
         >
           Fast, extendable launcher
         </MediaListItem>
         <MediaListItem
           title="iTerm2"
           href="https://iterm2.com/"
-          src="/tools/iterm.png"
+          src={itermThumb}
         >
           Terminal of choice
         </MediaListItem>
         <MediaListItem
           title="Inkdrop"
           href="https://inkdrop.app/"
-          src="/tools/inkdrop.png"
+          src={inkdropThumb}
         >
           Markdown note takink app
         </MediaListItem>
-        <MediaListItem
-          title="Cron"
-          href="https://cron.com/"
-          src="/tools/cron.png"
-        >
+        <MediaListItem title="Cron" href="https://cron.com/" src={cronThumb}>
           Calendar of choice
         </MediaListItem>
         <MediaListItem
           title="Todoist"
           href="https://todoist.com/"
-          src="/tools/todoist.png"
+          src={todoistThumb}
         >
           To-do list app
         </MediaListItem>
         <MediaListItem
           title="Spotify"
           href="https://open.spotify.com/"
-          src="/tools/spotify.png"
+          src={spotifyThumb}
         >
           Music player
         </MediaListItem>
         <MediaListItem
           title="Mimestream"
           href="https://mimestream.com/"
-          src="/tools/mimestream.png"
+          src={mimestreamThumb}
         >
           Mail client
         </MediaListItem>

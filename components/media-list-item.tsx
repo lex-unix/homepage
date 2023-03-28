@@ -1,9 +1,9 @@
 import { ReactNode } from 'react'
-import Image from 'next/image'
+import Image, { type StaticImageData } from 'next/image'
 import s from '@/styles/media-list.module.scss'
 
 interface Props {
-  src: string
+  src: string | StaticImageData
   title: string
   href: string
   size?: number
