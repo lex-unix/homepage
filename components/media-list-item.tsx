@@ -17,6 +17,8 @@ export default function MediaListItem({
   size = 48,
   children
 }: Props) {
+  const useBlur = typeof src !== 'string'
+
   return (
     <li className={s['list-item']}>
       <a
@@ -33,6 +35,7 @@ export default function MediaListItem({
             width={size}
             height={size}
             className={s.glow}
+            placeholder={useBlur ? 'blur' : 'empty'}
           />
         </div>
         <div className={s['text-container']}>
