@@ -28,7 +28,13 @@ export default function MediaListItem({
         className={s.content}
       >
         <div className={s['image-container']}>
-          <Image src={src} alt={title} width={size} height={size} />
+          <Image
+            src={src}
+            alt={title}
+            width={size}
+            height={size}
+            placeholder={useBlur ? 'blur' : 'empty'}
+          />
           <Image
             src={src}
             alt={title}
