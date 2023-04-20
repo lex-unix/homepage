@@ -28,7 +28,6 @@ const Home: NextPage = () => {
           Computer Science student from Kyiv, Ukraine. Building web and mobile
           applications. Having interest in machine learning.
         </p>
-        <p>Currently, building Pugged.</p>
       </div>
     </Container>
   )
