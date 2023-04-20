@@ -2,10 +2,10 @@ pre[class*='language-'] {
   width: 100%;
   font-size: 16px;
   color: var(--highContrast);
-  background-color: var(--gray1) !important;
+  background-color: var(--gray2) !important;
   margin: 0 auto;
   padding: var(--space1);
-  border: 1px solid var(--gray3);
+  border: 1px solid var(--gray5);
   border-radius: 4px;
   overflow-x: scroll;
 }
