@@ -24,16 +24,6 @@ export default function Writing({
             slug={post.slug}
           />
         ))}
-        <PostPreview
-          title="Neovim as my main editor for 2023"
-          description="Setting up Neovim and working from terminal"
-          slug="2"
-        />
-        <PostPreview
-          title="Building calendar bot for Telegram using Python"
-          description="Your Google calendar right in Telegram"
-          slug="3"
-        />
       </ul>
     </Container>
   )
