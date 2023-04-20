@@ -76,7 +76,7 @@ const Dashboard: NextPage = () => {
       </ul>
       {playlists && (
         <>
-          <p className={s.heading}>My spotify playlists</p>
+          <p className={s.heading}>Spotify playlists</p>
           <ul className={s.list}>
             {playlists.map(playlist => (
               <MediaListItem

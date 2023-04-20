@@ -14,7 +14,7 @@ export default function Writing({
       title="Writing"
       description="Place for sharing my thoughts and other stuff"
     >
-      <p className={s.heading}>Place for sharing my thoughts and other stuff</p>
+      <p className={s.heading}>Place to Share My Thoughts</p>
       <ul className={s.list}>
         {posts.map(post => (
           <PostPreview

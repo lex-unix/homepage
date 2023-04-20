@@ -9,9 +9,7 @@ const ProjectsPage: NextPage = () => {
       title="Projects"
       description="Stuff I built using React, React Native, Next.js, and TypeScript"
     >
-      <p className={s.heading}>
-        Stuff I built using React, React Native, Next.js, and TypeScript
-      </p>
+      <p className={s.heading}>My Projects</p>
       <ul className={s.list}>
         <ProjectItem
           name="KYI"
