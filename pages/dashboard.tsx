@@ -47,7 +47,7 @@ const Dashboard: NextPage = () => {
           href="https://inkdrop.app/"
           src={inkdropThumb}
         >
-          Markdown note takink app
+          Markdown note taking app
         </MediaListItem>
         <MediaListItem title="Cron" href="https://cron.com/" src={cronThumb}>
           Calendar of choice
