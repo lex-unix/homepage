@@ -12,16 +12,22 @@ const ProjectsPage: NextPage = () => {
       <p className={s.heading}>My Projects</p>
       <ul className={s.list}>
         <ProjectItem
-          name="KYI"
-          description="Find all Kyiv events in one app"
-          href="#"
-          year={2022}
+          name="Babyn Yar"
+          description="In memory of the victims of the Babyn Yar tragedy"
+          href="https://www.babynyar.org.ua"
+          year={2023}
         />
         <ProjectItem
-          name="Plugged"
-          description="Modern web app for sharing forbidden experience"
-          href="https://plugged.kyivangels.com"
-          year={2022}
+          name="ACRO"
+          description="Explore stunning architecture projects worldwide"
+          href="https://acro.lexunix.me"
+          year={2023}
+        />
+        <ProjectItem
+          name="Shelf"
+          description="App for tracking reading goals"
+          href="https://shelf.lexunix.me"
+          year={2023}
         />
         <ProjectItem
           name="Pravda"
