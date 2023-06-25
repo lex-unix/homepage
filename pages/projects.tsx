@@ -13,7 +13,7 @@ const ProjectsPage: NextPage = () => {
       <ul className={s.list}>
         <ProjectItem
           name="Babyn Yar"
-          description="In memory of the victims of the Babyn Yar tragedy"
+          description="Government project in memory of the victims of the Babyn Yar tragedy"
           href="https://babynyar.org.ua"
           year={2023}
         />
