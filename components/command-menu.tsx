@@ -78,6 +78,7 @@ const CommandMenu: React.FC = () => {
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
       if (e.key === 'k' && e.metaKey) {
+        e.preventDefault()
         setIsOpen(open => !open)
       }
 
