@@ -56,7 +56,7 @@ const CommandMenu: React.FC = () => {
       {
         name: 'Email',
         icon: <EmailIcon />,
-        cb: () => router.push('mailto:alexmiyin@gmail.com')
+        cb: () => router.push('mailto:hello@lexunix.me')
       },
       {
         name: 'GitHub',
