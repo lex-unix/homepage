@@ -5,14 +5,16 @@ import useSWR from 'swr'
 import type { Playlist, Track } from '@/lib/types'
 import fetcher from '@/lib/fetcher'
 import MediaListItem from '@/components/media-list-item'
-import arcThumb from '@/public/tools/arc.png'
+import firefoxThumb from '@/public/tools/firefox.png'
 import raycastThumb from '@/public/tools/raycast.png'
-import itermThumb from '@/public/tools/iterm.png'
-import inkdropThumb from '@/public/tools/inkdrop.png'
+import kittyThumb from '@/public/tools/kitty.png'
+import neovimThumb from 'public/tools/neovim.png'
+import bearThumb from '@/public/tools/bear-notes.png'
 import cronThumb from '@/public/tools/cron.png'
-import todoistThumb from '@/public/tools/todoist.png'
 import spotifyThumb from '@/public/tools/spotify.png'
-import mimestreamThumb from '@/public/tools/mimestream.png'
+import mailThumb from '@/public/tools/mail.png'
+import soundsourceThumb from '@/public/tools/soundsource.png'
+import cleanshotThumb from '@/public/tools/cleanshot-x.png'
 
 const Dashboard: NextPage = () => {
   const { data: playlists } = useSWR<Playlist[]>('/api/playlists', fetcher)
@@ -25,7 +27,11 @@ const Dashboard: NextPage = () => {
     >
       <p className={s.heading}>Tools i use everyday</p>
       <ul className={s.list}>
-        <MediaListItem title="Arc" href="https://arc.net/" src={arcThumb}>
+        <MediaListItem
+          title="Firefox"
+          href="https://www.mozilla.org/en-US/firefox/new/"
+          src={firefoxThumb}
+        >
           Browser of choice
         </MediaListItem>
         <MediaListItem
@@ -36,28 +42,45 @@ const Dashboard: NextPage = () => {
           Fast, extendable launcher
         </MediaListItem>
         <MediaListItem
-          title="iTerm2"
-          href="https://iterm2.com/"
-          src={itermThumb}
+          title="Kitty"
+          href="https://sw.kovidgoyal.net/kitty/"
+          src={kittyThumb}
         >
           Terminal of choice
         </MediaListItem>
         <MediaListItem
-          title="Inkdrop"
-          href="https://inkdrop.app/"
-          src={inkdropThumb}
+          title="Neovim"
+          href="https://neovim.io/"
+          src={neovimThumb}
         >
-          Markdown note taking app
+          Code editor
+        </MediaListItem>
+        <MediaListItem title="Bear" href="https://bear.app/" src={bearThumb}>
+          Note taking app
         </MediaListItem>
         <MediaListItem title="Cron" href="https://cron.com/" src={cronThumb}>
           Calendar of choice
         </MediaListItem>
         <MediaListItem
-          title="Todoist"
-          href="https://todoist.com/"
-          src={todoistThumb}
+          title="Mail"
+          href="https://mimestream.com/"
+          src={mailThumb}
         >
-          To-do list app
+          Mail client
+        </MediaListItem>
+        <MediaListItem
+          title="SoundSource"
+          href="https://rogueamoeba.com/soundsource/"
+          src={soundsourceThumb}
+        >
+          Superior sound control for Mac
+        </MediaListItem>
+        <MediaListItem
+          title="CleanShot X"
+          href="https://cleanshot.com/"
+          src={cleanshotThumb}
+        >
+          Sreenshot tool for Mac
         </MediaListItem>
         <MediaListItem
           title="Spotify"
@@ -65,13 +88,6 @@ const Dashboard: NextPage = () => {
           src={spotifyThumb}
         >
           Music player
-        </MediaListItem>
-        <MediaListItem
-          title="Mimestream"
-          href="https://mimestream.com/"
-          src={mimestreamThumb}
-        >
-          Mail client
         </MediaListItem>
       </ul>
       {playlists && (
