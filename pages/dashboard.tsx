@@ -63,7 +63,7 @@ const Dashboard: NextPage = () => {
         </MediaListItem>
         <MediaListItem
           title="Apple Mail"
-          href="https://apps.apple.com/us/app/mail/id1108187098"
+          href="https://www.icloud.com/mail"
           src={mailThumb}
         >
           Mail client
