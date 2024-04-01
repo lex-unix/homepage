@@ -62,8 +62,8 @@ const Dashboard: NextPage = () => {
           Calendar of choice
         </MediaListItem>
         <MediaListItem
-          title="Mail"
-          href="https://mimestream.com/"
+          title="Apple Mail"
+          href="https://apps.apple.com/us/app/mail/id1108187098"
           src={mailThumb}
         >
           Mail client
@@ -80,7 +80,7 @@ const Dashboard: NextPage = () => {
           href="https://cleanshot.com/"
           src={cleanshotThumb}
         >
-          Sreenshot tool for Mac
+          Screenshot tool for Mac
         </MediaListItem>
         <MediaListItem
           title="Spotify"
