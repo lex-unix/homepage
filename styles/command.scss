@@ -75,7 +75,6 @@
   color: var(--gray10);
   font-weight: 400;
   user-select: none;
-  transition: background 100ms ease, color 100ms ease;
 
   &[aria-selected='true'] {
     background: var(--gray4);
@@ -91,7 +90,7 @@
     margin-top: 8px;
   }
 
-  & + [cmdk-item] {
+  &+[cmdk-item] {
     margin-top: 4px;
   }
 }
@@ -113,7 +112,7 @@
   margin: 4px 0;
 }
 
-*:not([hidden]) + [cmdk-group] {
+*:not([hidden])+[cmdk-group] {
   margin-top: 8px;
 }
 
