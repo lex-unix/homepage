@@ -14,7 +14,7 @@ const ProjectsPage: NextPage = () => {
         <ProjectItem
           name="Babyn Yar"
           description="Government project in memory of the victims of the Babyn Yar tragedy"
-          href="https://babynyar.org.ua"
+          href="https://babynyar.gov.ua"
           year={2023}
         />
         <ProjectItem
