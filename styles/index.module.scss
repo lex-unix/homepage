@@ -44,3 +44,45 @@
 .muted {
   color: var(--gray11);
 }
+
+.content {
+  margin-top: 112px;
+  margin-bottom: 60px;
+
+  &>section>h1 {
+    font-size: 16px;
+    color: var(--gray11);
+    margin-bottom: 20px;
+  }
+}
+
+.subcontent {
+  display: grid;
+  gap: 20px;
+  justify-content: space-around;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.subTitle {
+  display: grid;
+  text-decoration: underline;
+  font-weight: 500;
+  text-decoration-color: var(--gray10);
+  text-decoration-thickness: 1px;
+  line-height: 2.25rem;
+}
+
+.subDesc {
+  color: var(--gray10);
+}
+
+@media only screen and (max-width: 640px) {
+  .content {
+    margin-top: 80px;
+  }
+
+  .subcontent {
+    gap: 12px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
