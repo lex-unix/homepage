@@ -7,6 +7,7 @@ import { recentPostsQuery } from '@/lib/queries'
 import { Post } from '@/lib/types'
 import { InferGetStaticPropsType } from 'next'
 import { projects } from '@/lib/projects'
+import Link from 'next/link'
 
 export default function Home({
   posts
@@ -40,7 +41,7 @@ export default function Home({
           <h1>Projects</h1>
           <div className={s.subcontent}>
             {projects.slice(0, 2).map(p => (
-              <div>
+              <div key={p.name}>
                 <a href={p.href} target="_blank" className={s.subTitle}>
                   {p.name}
                 </a>
@@ -48,10 +49,10 @@ export default function Home({
               </div>
             ))}
             <div>
-              <a href="/projects" className={s.subTitle}>
+              <Link href="/projects" className={s.subTitle}>
                 All projects
-              </a>
-              <p className={s.subDesc}>Some stuff I've built</p>
+              </Link>
+              <p className={s.subDesc}>Some stuff I&apos;ve built</p>
             </div>
           </div>
         </section>
@@ -59,7 +60,7 @@ export default function Home({
           <h1>Writing</h1>
           <div className={s.subcontent}>
             {posts.map(p => (
-              <div>
+              <div key={p._id}>
                 <a href={`/writing/${p.slug}`} className={s.subTitle}>
                   {p.title}
                 </a>
@@ -67,9 +68,9 @@ export default function Home({
               </div>
             ))}
             <div>
-              <a href="/writing" className={s.subTitle}>
+              <Link href="/writing" className={s.subTitle}>
                 All writing
-              </a>
+              </Link>
               <p className={s.subDesc}>Some stuff I write about occasionally</p>
             </div>
           </div>
