@@ -7,6 +7,7 @@ import { ThemeProvider } from 'next-themes'
 import CommandMenu from '@/components/command-menu'
 import Navbar from '@/components/navbar'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <CommandMenu />
       <Component {...pageProps} />
       <Analytics />
+      <SpeedInsights />
     </ThemeProvider>
   )
 }
