@@ -18,7 +18,7 @@
     "cmdk": "1.0.0",
     "date-fns": "^3.6.0",
     "jotai": "^2.9.3",
-    "next": "14.2.8",
+    "next": "14.2.13",
     "next-mdx-remote": "^5.0.0",
     "next-sanity": "^9.4.7",
     "next-themes": "^0.3.0",
