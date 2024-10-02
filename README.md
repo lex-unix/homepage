@@ -1,7 +1,7 @@
 ## Personal homepage
 
 This application is built with Next.js (`pages` router) and deployed to Vercel.
-I'm using Sanity to publis my blog posts (which is a rare occasion).
+I'm using Sanity to publish my blog posts (which is a rare occasion).
 
 ### Future plans
 
