@@ -37,7 +37,7 @@
     "eslint-config-next": "14.2.14",
     "prettier": "^3.3.3",
     "reading-time": "^1.5.0",
-    "rehype": "^13.0.1",
+    "rehype": "^13.0.2",
     "rehype-prism-plus": "^2.0.0",
     "remark-gfm": "^4.0.0",
     "sass": "^1.79.4",
