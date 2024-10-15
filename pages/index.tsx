@@ -13,7 +13,7 @@ export default function Home({
   posts
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <Container description="Computer Science student from Kyiv, Ukraine. Building web and mobile applications">
+    <Container description="Software Engineer. Currently in Paris, France.">
       <div className={s.info}>
         <div className={s['img-container']}>
           <Image
@@ -27,14 +27,13 @@ export default function Home({
         </div>
         <div>
           <p className={s.name}>Alexey Miin</p>
-          <p className={s.muted}>Software Engineer</p>
+          <p className={s.muted}>
+            Software Engineer at Uvaga Communications Agency
+          </p>
         </div>
       </div>
       <div className={s.about}>
-        <p>
-          Computer Science student from Kyiv, Ukraine. Building web and mobile
-          applications. Having interest in machine learning.
-        </p>
+        <p>Software Engineer. Currently in Paris, France.</p>
       </div>
       <div className={s.content}>
         <section className={s.content}>
