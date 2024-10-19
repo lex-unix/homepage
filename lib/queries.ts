@@ -32,6 +32,6 @@ export const postBySlugQuery = `
 export const postUpdateQuery = `*[_type == "post" && _id == $id].slug.current`
 
 export const recentPostsQuery = `
-  *[_type == "post"] | order(date desc, _updatedAt desc)[0..5] {
+  *[_type == "post"] | order(date desc, _updatedAt desc)[0..1] {
   ${postFields}
 }`
