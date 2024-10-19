@@ -1,13 +1,22 @@
 pre[class*='language-'] {
   width: 100%;
-  font-size: 16px;
   color: var(--highContrast);
   background-color: var(--gray2) !important;
   margin: 0 auto;
-  padding: var(--space1);
+  padding: 0 10px;
   border: 1px solid var(--gray5);
   border-radius: 4px;
   overflow-x: scroll;
+
+  & code {
+    font-size: 14px;
+  }
+
+  & .code-line {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -17,8 +26,10 @@ pre::-webkit-scrollbar {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 pre {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .token.keyword {
