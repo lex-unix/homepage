@@ -42,6 +42,7 @@ export default async function handler(
   try {
     const slug = await sanityClient.fetch(postUpdateQuery, { id })
     await Promise.all([
+      res.revalidate('/'),
       res.revalidate('/writing'),
       res.revalidate(`/writing/${slug}`)
     ])
