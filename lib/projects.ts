@@ -1,5 +1,11 @@
 export const projects = [
   {
+    name: 'Goship',
+    description: 'Tool to simplify deployment, rollback and server setup',
+    href: 'https://github.com/lex-unix/go-ship',
+    year: 2024
+  },
+  {
     name: 'Babyn Yar',
     description:
       'Government project in memory of the victims of the Babyn Yar tragedy',
