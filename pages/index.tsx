@@ -51,7 +51,6 @@ export default function Home({
               <Link href="/projects" className={s.subTitle}>
                 All projects
               </Link>
-              <p className={s.subDesc}>Some stuff I&apos;ve built</p>
             </div>
           </div>
         </section>
@@ -70,7 +69,6 @@ export default function Home({
               <Link href="/writing" className={s.subTitle}>
                 All writing
               </Link>
-              <p className={s.subDesc}>Some stuff I write about occasionally</p>
             </div>
           </div>
         </section>
