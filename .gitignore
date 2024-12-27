@@ -6,3 +6,5 @@ dist
 .env
 sanity.cli.ts
 .sanity
+.envrc
+.direnv/
