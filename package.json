@@ -27,7 +27,7 @@
     "sanity": "^3.72.1",
     "sanity-plugin-markdown": "5.0.0",
     "styled-components": "^6.1.14",
-    "swr": "^2.2.5"
+    "swr": "^2.3.2"
   },
   "devDependencies": {
     "@types/node": "22.10.5",
