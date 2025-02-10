@@ -41,7 +41,7 @@
     "rehype": "^13.0.2",
     "rehype-prism-plus": "^2.0.0",
     "remark-gfm": "^4.0.0",
-    "sass": "^1.81.0",
+    "sass": "^1.84.0",
     "typescript": "5.7.3"
   }
 }
