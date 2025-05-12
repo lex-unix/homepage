@@ -17,7 +17,7 @@
     "@vercel/speed-insights": "^1.2.0",
     "cmdk": "1.1.1",
     "date-fns": "^4.1.0",
-    "jotai": "^2.12.3",
+    "jotai": "^2.12.4",
     "next": "15.3.1",
     "next-mdx-remote": "^5.0.0",
     "next-sanity": "^9.9.6",
