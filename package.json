@@ -34,7 +34,7 @@
     "@types/react": "19.1.5",
     "@types/react-dom": "19.1.5",
     "eslint": "^9",
-    "eslint-config-next": "15.3.2",
+    "eslint-config-next": "15.3.3",
     "@eslint/eslintrc": "^3",
     "prettier": "^3.5.3",
     "reading-time": "^1.5.0",
