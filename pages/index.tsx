@@ -33,7 +33,7 @@ export default function Home({
         </div>
       </div>
       <div className={s.about}>
-        <p>Software Engineer based Paris, France.</p>
+        <p>Software Engineer based in Paris, France.</p>
       </div>
       <div className={s.content}>
         <section className={s.content}>

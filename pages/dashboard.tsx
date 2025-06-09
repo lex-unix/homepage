@@ -7,7 +7,7 @@ import fetcher from '@/lib/fetcher'
 import MediaListItem from '@/components/media-list-item'
 import firefoxThumb from '@/public/tools/firefox.png'
 import raycastThumb from '@/public/tools/raycast.png'
-import kittyThumb from '@/public/tools/kitty.png'
+import ghosttyThumb from '@/public/tools/ghostty.png'
 import neovimThumb from 'public/tools/neovim.png'
 import bearThumb from '@/public/tools/bear-notes.png'
 import cronThumb from '@/public/tools/cron.png'
@@ -42,9 +42,9 @@ const Dashboard: NextPage = () => {
           Fast, extendable launcher
         </MediaListItem>
         <MediaListItem
-          title="Kitty"
-          href="https://sw.kovidgoyal.net/kitty/"
-          src={kittyThumb}
+          title="Ghostty"
+          href="https://ghostty.org/"
+          src={ghosttyThumb}
         >
           Terminal of choice
         </MediaListItem>
