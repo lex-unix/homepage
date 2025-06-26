@@ -1,7 +1,7 @@
 {
   description = "A Nix-flake-based Node.js development environment";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/release-24.11";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/release-25.05";
 
   outputs =
     { self, nixpkgs }:
