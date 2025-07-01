@@ -24,7 +24,7 @@
     "next-themes": "^0.4.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "sanity": "^3.94.0",
+    "sanity": "^3.95.0",
     "sanity-plugin-markdown": "5.1.1",
     "styled-components": "^6.1.19",
     "swr": "^2.3.3"
