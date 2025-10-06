@@ -42,6 +42,6 @@
     "rehype-prism-plus": "^2.0.1",
     "remark-gfm": "^4.0.1",
     "sass": "^1.93.2",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   }
 }
