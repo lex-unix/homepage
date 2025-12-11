@@ -11,7 +11,7 @@
     "studio-deploy": "sanity deploy"
   },
   "dependencies": {
-    "@sanity/image-url": "^1.2.0",
+    "@sanity/image-url": "^2.0.2",
     "@sanity/webhook": "^4.0.4",
     "@vercel/analytics": "^1.6.1",
     "@vercel/speed-insights": "^1.2.0",
