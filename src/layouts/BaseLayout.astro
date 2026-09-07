@@ -1,6 +1,7 @@
 ---
 import '@/styles/globals.css'
 import { getCollection } from 'astro:content'
+import Analytics from '@vercel/analytics/astro'
 import Navbar from '../components/navbar'
 import CommandMenu from '../components/command-menu'
 
@@ -54,6 +55,7 @@ const writingPages = (await getCollection('blog'))
     <meta name="theme-color" content="hsl(240, 100%, 82%)" />
     <link rel="icon" href="/favicons/favicon.ico" />
     <link rel="manifest" href="/favicons/site.webmanifest" />
+    <Analytics />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
